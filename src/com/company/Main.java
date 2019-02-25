@@ -37,11 +37,9 @@ public class Main {
 
         //Step 2 code goes here.  Use the arrays (suits and values) and a nested loop to
         // populate the deck array
-        for (int j = 0; j < 3; j++){
-            for (int i =0; i < 12; i++){
-                deck[(i) + (j*4)] = suits[j] + values[i];
-            }
-        }
+        int deckIndex = 0;
+        for (int suitIndex = 0; suitIndex < 4; suitIndex++);
+        for (int valueIndex = 0; valueIndex < 13; valueIndex++);
     }
 
 
@@ -52,7 +50,7 @@ public class Main {
         //Step 3 code goes here.  Use a for loop to print the deck array
 
         for (int i = 0; i < deck.length; i++){
-            System.out.println();
+            System.out.println(deck[i]);
         }
 
     }
@@ -62,12 +60,21 @@ public class Main {
 
         //Step 4 code goes here.  Use a for loop to swap each card in the deck
         //with a random card in the deck
+        for (int i = 0; i < deck.length; i++){
+            int random = int(Math.random()*52);
+            swap(deck, i, random);
+        }
 
     }
 
     //Method to swap the value of two spots in the deck array
     public static void swap(String[] deck, int i, int x){
         //step 5 code goes here.  Swap the values held by deck[i] and deck[x]
+
+        String cards = deck[x];
+        deck[x] = deck[i];
+        deck[i] = cards;
+
 
 
     }
